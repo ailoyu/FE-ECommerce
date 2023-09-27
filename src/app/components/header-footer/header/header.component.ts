@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, HostListener, Injectable, OnInit } from '@angular/core';
 import { LoginComponent } from '../../user/login/login.component';
 import { TokenService } from 'src/app/service/token.service';
 import { RegisterDTO } from 'src/app/dtos/user/register.dto';
@@ -61,6 +61,20 @@ export class HeaderComponent implements OnInit {
     console.log(this.loginResponse);
     });
     
+  }
+
+  showMenu: boolean = false;
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const targetElement = event.target as HTMLElement;
+    if (!targetElement.closest('.navbar')) {
+      this.showMenu = false;
+    }
+  }
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
   }
 
   

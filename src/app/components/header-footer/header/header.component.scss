@@ -70,9 +70,41 @@ ul {
     top: 100%;
     right: 0;
     z-index: 1;
-    background-color: #f9f9f9;
+    background-color: white !important;
     border: 1px solid #ccc;
     padding: 5px 0;
+  }
+
+  @media (max-width: 767px) {
+    .navbar-collapse {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      width: 100%;
+      max-width: 200px;
+      background-color: grey;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000; /* Add this line */
+    }
+    
+    .navbar-collapse.show {
+      right: 0;
+    }
+    
+    .navbar-collapse .navbar-nav {
+      flex-direction: column;
+    }
+    
+    .navbar-collapse .navbar-nav .nav-item {
+      width: 100%;
+    }
+    
+    .navbar-collapse .navbar-nav .nav-link {
+      padding: 10px 16px;
+      border-radius: 0;
+      color: #333;
+    }
   }
   
   .dropdown-menu li {
@@ -90,3 +122,5 @@ ul {
   .right-align {
     margin-left: auto;
   }
+
+  
