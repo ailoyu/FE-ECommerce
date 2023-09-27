@@ -5,7 +5,6 @@ import { Category } from 'src/app/model/category';
 import { Product } from 'src/app/model/product';
 import { CategoryService } from 'src/app/service/category.service';
 import { ProductService } from 'src/app/service/product.service';
-import 'lazysizes';
 
 @Component({
   selector: 'app-products',
