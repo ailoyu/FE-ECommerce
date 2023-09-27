@@ -128,7 +128,7 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/cdk@16.2.5":
+"@angular/cdk@^16.2.5", "@angular/cdk@16.2.5":
   version "16.2.5"
   resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-16.2.5.tgz"
   integrity sha512-9VbdWSYVFQq9y7Dl8KMooE+Sa5nx0l4Neue1IMmSS2v8b602VykiYA5aqz0BsLjfoiboXlUz6LCBXxukJtogcQ==

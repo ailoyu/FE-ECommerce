@@ -15,6 +15,7 @@ import {
   HTTP_INTERCEPTORS
 } from '@angular/common/http';
 import { TokenInterceptor } from './interceptor/token.interceptor';
+import { MatIconModule } from '@angular/material/icon';
 
 import { RouterModule, Routes } from '@angular/router';
 
