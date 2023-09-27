@@ -23,10 +23,9 @@
     <div class="row">        
         <div class="col-lg-4 col-md-6" *ngFor="let product of products">
             <div class="product-item" (click)="onProductClick(product.id)" >
-                <img 
-                    [src]="product.url"
-                    alt="Product Image" 
-                    class="product-image">
+                    <img *ngIf="loading" src="placeholder.gif" alt="loading" class="product-image"/>
+                    <img [hidden]="loading" (load)="onLoad()" [src]="product.url" alt="Product Image" 
+                    class="product-image" />
                 <h3 class="product-name">{{product.name}}</h3>
                 <p class="product-description">{{product.description}}</p>
                 <p class="product-price">Thể loại: {{product.category_name}}</p>

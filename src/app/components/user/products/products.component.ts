@@ -5,6 +5,7 @@ import { Category } from 'src/app/model/category';
 import { Product } from 'src/app/model/product';
 import { CategoryService } from 'src/app/service/category.service';
 import { ProductService } from 'src/app/service/product.service';
+import 'lazysizes';
 
 @Component({
   selector: 'app-products',
@@ -12,6 +13,11 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit{
+
+  loading: boolean = true
+  onLoad() {
+      this.loading = false;
+  }
 
   products: Product[] = [];
   currentPage: number = 1;
